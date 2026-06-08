@@ -1,0 +1,7 @@
+server:
+  port: 8081
+
+adapter:
+  algorithm-service-base-url: http://127.0.0.1:8001
+  skygrid-mode: mock
+

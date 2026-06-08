@@ -1,0 +1,49 @@
+{
+  "tasks": [
+    {
+      "taskId": "BT-001",
+      "taskType": "POWER_LINE_INSPECTION",
+      "startGrid": "G-01-01",
+      "endGrid": "G-18-16",
+      "level": "L120",
+      "avoidRisk": true,
+      "allowDiagonal": true
+    },
+    {
+      "taskId": "BT-002",
+      "taskType": "LOGISTICS_DELIVERY",
+      "startGrid": "G-02-18",
+      "endGrid": "G-17-03",
+      "level": "L150",
+      "avoidRisk": true,
+      "allowDiagonal": true
+    },
+    {
+      "taskId": "BT-003",
+      "taskType": "EMERGENCY_RESCUE",
+      "startGrid": "G-19-02",
+      "endGrid": "G-04-17",
+      "level": "L120",
+      "avoidRisk": false,
+      "allowDiagonal": true
+    },
+    {
+      "taskId": "BT-004",
+      "taskType": "POWER_LINE_INSPECTION",
+      "startGrid": "G-03-04",
+      "endGrid": "G-10-10",
+      "level": "L120",
+      "avoidRisk": true,
+      "allowDiagonal": true
+    },
+    {
+      "taskId": "BT-005",
+      "taskType": "LOGISTICS_DELIVERY",
+      "startGrid": "G-05-18",
+      "endGrid": "G-18-05",
+      "level": "L180",
+      "avoidRisk": true,
+      "allowDiagonal": true
+    }
+  ]
+}
