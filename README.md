@@ -240,38 +240,29 @@ curl -X POST http://127.0.0.1:8081/api/tasks/1/check-conflict
 
 ## 演示截图
 
-截图统一放在：
+### 任务创建
 
-```text
-docs/screenshots/
-```
+![任务创建](docs/screenshots/01-task-create.png)
 
-截图前先启动三个服务：
+### 航线规划展示
 
-```text
-algorithm-service: http://127.0.0.1:8001
-route-adapter-service: http://127.0.0.1:8081
-frontend: http://127.0.0.1:5173
-```
+![航线规划展示](docs/screenshots/02-route-plan.png)
 
-然后打开：
+### 风险评估
 
-```text
-http://127.0.0.1:5173/
-```
+![风险评估](docs/screenshots/03-risk-evaluation.png)
 
-建议按以下命名保存：
+### 算法对比
 
-| 文件名 | 截图位置 | 截图内容 |
-| --- | --- | --- |
-| `01-task-create.png` | 前端「任务创建」页 | 任务名称、任务类型、起点、终点、高度层、算法、风险规避、SkyGrid 开关，保留右侧网格地图。 |
-| `02-route-plan.png` | 点击“开始规划”后切到「航线规划展示」页 | 网格地图、起点、终点、禁飞区、障碍物、风险区、规划航线，以及距离、耗时、转弯次数等指标。 |
-| `03-risk-evaluation.png` | 前端「风险评估」页 | `riskScore`、`riskLevel`、`riskFactors`、电池消耗、能耗安全性，以及右侧航线图。 |
-| `04-algorithm-compare.png` | 前端「算法对比」页，点击“执行对比”后 | Dijkstra / A* / Theta* 的距离、规划耗时、风险分图表和表格。 |
-| `05-skygrid-linkage.png` | 前端「SkyGrid 联动」页，点击“冲突检查”和“提交预约”后 | TimeSlot 占用表、`RISK_CONFLICT` mock 冲突结果、`MOCK_SUBMITTED` 预约状态和冲突点高亮。 |
-| `06-api-docs.png` | 浏览器打开 `http://127.0.0.1:8001/docs` | FastAPI Swagger 页面，重点露出 `/api/plan`、`/api/plan/compare`、`/api/timeslot/convert`、`/api/benchmark/symmetry`。 |
+![算法对比](docs/screenshots/04-algorithm-compare.png)
 
-答辩 PPT 优先使用前 5 张；第 6 张作为接口实现佐证。
+### SkyGrid 联动
+
+![SkyGrid 联动](docs/screenshots/05-skygrid-linkage.png)
+
+### API 文档
+
+![API 文档](docs/screenshots/06-api-docs.png)
 
 ## 测试命令
 
@@ -318,7 +309,7 @@ npm run build
 - Java 侧接 MySQL 持久化。
 - 实现 `RealSkyGridClient`。
 - 支持高度层切换和爬升代价。
-- 增加任务历史、地图编辑和真实截图。
+- 增加任务历史和地图编辑能力。
 
 ## 复试项目介绍
 
