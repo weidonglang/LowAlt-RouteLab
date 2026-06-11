@@ -113,6 +113,38 @@ frontend: http://127.0.0.1:5173
 
 ### 方式一：本地启动
 
+推荐使用启动脚本：
+
+```powershell
+.\scripts\start-dev.ps1
+```
+
+双击启动方式：
+
+```text
+start-lowalt-routelab.bat
+```
+
+如果 PowerShell 阻止脚本运行，先执行：
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+停止本地开发服务：
+
+```powershell
+.\scripts\stop-dev.ps1
+```
+
+双击停止方式：
+
+```text
+stop-lowalt-routelab.bat
+```
+
+也可以手动启动三个服务：
+
 启动 Python 算法服务：
 
 ```bash

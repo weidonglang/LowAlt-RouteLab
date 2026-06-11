@@ -8,7 +8,7 @@
           <p>Grid + Level + TimeSlot</p>
         </div>
       </div>
-      <el-menu v-model="activeView" class="nav-menu">
+      <el-menu :default-active="activeView" class="nav-menu" @select="selectView">
         <el-menu-item index="task"><ClipboardList :size="18" />任务创建</el-menu-item>
         <el-menu-item index="route"><Map :size="18" />航线展示</el-menu-item>
         <el-menu-item index="risk"><ShieldAlert :size="18" />风险评估</el-menu-item>
@@ -369,6 +369,10 @@ async function withBusy(action: () => Promise<void>) {
   } finally {
     busy.value = false;
   }
+}
+
+function selectView(index: string) {
+  activeView.value = index;
 }
 
 onMounted(async () => {
