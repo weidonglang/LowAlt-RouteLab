@@ -77,6 +77,8 @@ MockSkyGridClient
 - [算法实验评估报告](docs/algorithm-evaluation-report.md)
 - [风险模型设计](docs/risk-model-design.md)
 - [TimeSlot 占用转换设计](docs/timeslot-conversion-design.md)
+- [v0.1.0 发布检查清单](docs/release-checklist-v0.1.0.md)
+- [v0.1.0 验证记录](docs/release-validation.md)
 - [群论增强模块](docs/group-theory-module.md)
 - [实验计划](docs/experiment-plan.md)
 - [复试项目介绍](docs/interview-notes.md)
