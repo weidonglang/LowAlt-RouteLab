@@ -3,6 +3,7 @@
 .env
 __pycache__/
 .pytest_cache/
+algorithm-service/.venv/
 target/
 node_modules/
 dist/
