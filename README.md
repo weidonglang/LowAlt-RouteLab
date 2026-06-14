@@ -16,6 +16,24 @@ Grid + Level + TimeSlot
 
 系统支持低空网格地图、禁飞区、障碍物、风险区、Dijkstra / A* / Theta* 路径规划、C8 转弯代价、D4 对称增强实验、风险评分、能耗估计、TimeSlot 占用转换和 SkyGrid mock 冲突校验。
 
+## 低空项目群闭环
+
+LowAlt-RouteLab 负责低空航线规划与风险评估，SkyGrid 负责低空空域资源调度与冲突治理。两个项目组合后，不再是两个孤立 demo，而是形成“从航线生成到空域审批治理”的工程闭环。
+
+```text
+LowAlt-RouteLab
+航线规划 / 风险评估 / 能耗估计 / TimeSlot 转换
+        ↓
+SkyGrid
+空域预约 / 审批流转 / 冲突检测 / 占用记录 / 消息通知 / 监控治理
+```
+
+闭环链路：
+
+```text
+航线规划 → 风险评估 → TimeSlot 占用转换 → SkyGrid 冲突检测 → 预约审批 → 通知审计 → 监控治理
+```
+
 ## 项目定位
 
 本项目不是普通后台管理系统，而是面向低空技术与工程方向的算法仿真项目。
@@ -55,6 +73,7 @@ MockSkyGridClient
 - [架构说明](docs/architecture.md)
 - [API 设计](docs/api-design.md)
 - [算法设计](docs/algorithm-design.md)
+- [项目边界](docs/project-boundary.md)
 - [群论增强模块](docs/group-theory-module.md)
 - [实验计划](docs/experiment-plan.md)
 - [复试项目介绍](docs/interview-notes.md)
@@ -76,7 +95,7 @@ LowAlt-RouteLab 负责：
 - TimeSlot 占用转换
 - 调用 SkyGrid 检查和提交
 
-当前项目用 `MockSkyGridClient` 模拟真实 SkyGrid，保证没有外部系统时也能完整演示。
+当前项目用 `MockSkyGridClient` 模拟真实 SkyGrid，保证没有外部系统时也能完整演示。接入真实 SkyGrid 时，LowAlt-RouteLab 输出的占用序列会作为 SkyGrid 冲突检测和预约审批的输入。
 
 ## 核心功能
 
