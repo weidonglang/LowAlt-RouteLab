@@ -3,5 +3,14 @@ server:
 
 adapter:
   algorithm-service-base-url: http://127.0.0.1:8001
-  skygrid-mode: mock
 
+skygrid:
+  mode: mock
+  base-url: http://127.0.0.1:8080
+  token: dev-token
+  timeout-ms: 5000
+  org-id: 1
+  applicant-user-id: 1
+  applicant-name: lowalt-route-adapter
+  route-template-id: 1
+  default-level-id: 1

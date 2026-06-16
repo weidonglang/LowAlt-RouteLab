@@ -7,7 +7,9 @@ import com.lowalt.routelab.adapter.algorithm.TimeSlotConvertRequest;
 import com.lowalt.routelab.adapter.algorithm.TimeSlotConvertResult;
 import com.lowalt.routelab.adapter.skygrid.ConflictCheckResult;
 import com.lowalt.routelab.adapter.skygrid.MockSkyGridClient;
+import com.lowalt.routelab.adapter.skygrid.RoutePlanToSkyGridBookingMapper;
 import com.lowalt.routelab.adapter.skygrid.SkyGridSubmitResult;
+import com.lowalt.routelab.adapter.skygrid.TimeSlotOccupancyMapper;
 import com.lowalt.routelab.adapter.task.CreateRouteTaskRequest;
 import com.lowalt.routelab.adapter.task.InMemoryRouteTaskRepository;
 import com.lowalt.routelab.adapter.task.RouteTaskResponse;
@@ -79,7 +81,8 @@ class RouteTaskServiceTest {
         return new RouteTaskService(
                 new InMemoryRouteTaskRepository(),
                 algorithmClient,
-                new MockSkyGridClient()
+                new MockSkyGridClient(),
+                new RoutePlanToSkyGridBookingMapper(new TimeSlotOccupancyMapper())
         );
     }
 

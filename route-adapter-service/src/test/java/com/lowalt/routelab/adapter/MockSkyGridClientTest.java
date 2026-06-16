@@ -33,6 +33,15 @@ class MockSkyGridClientTest {
         assertThat(result.bookingId()).isEqualTo("MOCK-SG-1-2");
     }
 
+    @Test
+    void previewAndStatusRemainAvailableInMockMode() {
+        MockSkyGridClient client = new MockSkyGridClient();
+
+        assertThat(client.submitOccupancyPreview(List.of(unit())).previewStatus()).isEqualTo("MOCK_PREVIEW");
+        assertThat(client.getBookingStatus("MOCK-SG-1-2").status()).isEqualTo("MOCK_SUBMITTED");
+        assertThat(client.getConflictResolutionSuggestions("MOCK-SG-1-2")).hasSize(1);
+    }
+
     private static TimeSlotConvertResult.OccupancyUnit unit() {
         return new TimeSlotConvertResult.OccupancyUnit(
                 "G-01-01",
