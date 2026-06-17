@@ -1,0 +1,10 @@
+{
+  "scenarioId": "long_distance_patrol",
+  "taskType": "POWER_LINE_INSPECTION",
+  "mapId": "demo-city-20x20",
+  "startGrid": "G-01-01",
+  "endGrid": "G-19-19",
+  "level": "L150",
+  "avoidRisk": true,
+  "allowDiagonal": true
+}

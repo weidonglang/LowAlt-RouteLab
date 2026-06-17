@@ -1,0 +1,19 @@
+{
+  "scenarioId": "hard_conflict_replan_demo",
+  "taskName": "Hard Conflict Replan Demo",
+  "taskType": "CITY_INSPECTION",
+  "mapId": "demo-city-20x20",
+  "startGrid": "G-08-10",
+  "endGrid": "G-08-14",
+  "startLevel": "L120",
+  "droneModel": "M30",
+  "algorithm": "A_STAR",
+  "avoidRisk": true,
+  "allowDiagonal": true,
+  "connectSkyGrid": true,
+  "startTime": "2026-06-15T10:10:00",
+  "speedMps": 10.0,
+  "gridSizeMeters": 100.0,
+  "slotMinutes": 5,
+  "expectedConflict": "Existing SkyGrid occupancy at G-08-12 / L120 / 10:10-10:20"
+}
