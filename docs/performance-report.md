@@ -33,11 +33,11 @@ algorithm-service/benchmarks/results/benchmark-summary.csv
 
 | Algorithm | Success Rate | Avg Path Length | Avg Planning Time ms |
 |---|---:|---:|---:|
-| A_STAR | 1.0 | 1759.655 | 5.4 |
-| A_STAR_RISK_PENALTY | 1.0 | 1759.655 | 6.2 |
-| DIJKSTRA | 1.0 | 1759.655 | 76.6 |
-| THETA_STAR | 1.0 | 1706.536 | 6.0 |
-| THETA_STAR_RISK_PENALTY | 1.0 | 1706.536 | 7.4 |
+| A_STAR | 1.0 | 1759.655 | 8.8 |
+| A_STAR_RISK_PENALTY | 1.0 | 1759.655 | 9.0 |
+| DIJKSTRA | 1.0 | 1759.655 | 105.8 |
+| THETA_STAR | 1.0 | 1706.536 | 8.8 |
+| THETA_STAR_RISK_PENALTY | 1.0 | 1706.536 | 8.4 |
 
 ## Validation Note
 

@@ -29,6 +29,25 @@ Grid + Level + TimeSlot
 | v1.0.0 检查清单 | [docs/release-checklist-v1.0.0.md](docs/release-checklist-v1.0.0.md) |
 | v1.0.0 验证记录 | [docs/release-validation-v1.0.0.md](docs/release-validation-v1.0.0.md) |
 
+## Demo Screenshots
+
+The slots below are reserved for real runtime screenshots. Save images to the listed paths after the frontend and services are running; the README will render them automatically.
+
+| Route Planning | Risk Heatmap |
+| --- | --- |
+| <img src="assets/screenshots/route-planning.png" alt="LowAlt route planning" width="360"> | <img src="assets/screenshots/risk-heatmap.png" alt="LowAlt risk heatmap" width="360"> |
+| Save to `assets/screenshots/route-planning.png` | Save to `assets/screenshots/risk-heatmap.png` |
+
+| Algorithm Comparison | TimeSlot Conversion |
+| --- | --- |
+| <img src="assets/screenshots/astar-vs-theta.png" alt="LowAlt A* versus Theta*" width="360"> | <img src="assets/screenshots/timeslot-occupancy.png" alt="LowAlt TimeSlot occupancy" width="360"> |
+| Save to `assets/screenshots/astar-vs-theta.png` | Save to `assets/screenshots/timeslot-occupancy.png` |
+
+| SkyGrid Submit Result | Benchmark Dashboard |
+| --- | --- |
+| <img src="assets/screenshots/skygrid-submit-result.png" alt="LowAlt SkyGrid submit result" width="360"> | <img src="assets/screenshots/benchmark-dashboard.png" alt="LowAlt benchmark dashboard" width="360"> |
+| Save to `assets/screenshots/skygrid-submit-result.png` | Save to `assets/screenshots/benchmark-dashboard.png` |
+
 ## 低空项目群闭环
 
 LowAlt-RouteLab 负责低空航线规划与风险评估，SkyGrid 负责低空空域资源调度与冲突治理。两个项目组合后，不再是两个孤立 demo，而是形成“从航线生成到空域审批治理”的工程闭环。

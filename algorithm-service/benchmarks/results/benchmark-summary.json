@@ -10,7 +10,7 @@
       "avgTurnCount": 1.2,
       "avgRiskScore": 0.1994,
       "avgEnergyCost": 10.918,
-      "avgPlanningTimeMs": 5.4,
+      "avgPlanningTimeMs": 8.8,
       "avgTimeSlotCount": 15.2
     },
     {
@@ -21,7 +21,7 @@
       "avgTurnCount": 1.2,
       "avgRiskScore": 0.1984,
       "avgEnergyCost": 10.918,
-      "avgPlanningTimeMs": 6.2,
+      "avgPlanningTimeMs": 9,
       "avgTimeSlotCount": 15.2
     },
     {
@@ -32,7 +32,7 @@
       "avgTurnCount": 1.2,
       "avgRiskScore": 0.1984,
       "avgEnergyCost": 10.918,
-      "avgPlanningTimeMs": 76.6,
+      "avgPlanningTimeMs": 105.8,
       "avgTimeSlotCount": 15.2
     },
     {
@@ -43,7 +43,7 @@
       "avgTurnCount": 0.6,
       "avgRiskScore": 0.2356,
       "avgEnergyCost": 10.419,
-      "avgPlanningTimeMs": 6,
+      "avgPlanningTimeMs": 8.8,
       "avgTimeSlotCount": 2.6
     },
     {
@@ -54,7 +54,7 @@
       "avgTurnCount": 0.6,
       "avgRiskScore": 0.2356,
       "avgEnergyCost": 10.419,
-      "avgPlanningTimeMs": 7.4,
+      "avgPlanningTimeMs": 8.4,
       "avgTimeSlotCount": 2.6
     }
   ],
@@ -68,8 +68,8 @@
       "riskCellsPassed": 0,
       "riskScore": 0.193,
       "energyCost": 12.334,
-      "planningTimeMs": 110,
-      "wallTimeMs": 504.675,
+      "planningTimeMs": 165,
+      "wallTimeMs": 185.528,
       "visitedCount": 2503,
       "timeSlotCount": 16
     },
@@ -82,8 +82,8 @@
       "riskCellsPassed": 0,
       "riskScore": 0.193,
       "energyCost": 12.334,
-      "planningTimeMs": 4,
-      "wallTimeMs": 6.907,
+      "planningTimeMs": 6,
+      "wallTimeMs": 13.379,
       "visitedCount": 77,
       "timeSlotCount": 16
     },
@@ -96,8 +96,8 @@
       "riskCellsPassed": 0,
       "riskScore": 0.364,
       "energyCost": 11.515,
-      "planningTimeMs": 5,
-      "wallTimeMs": 7.438,
+      "planningTimeMs": 6,
+      "wallTimeMs": 10.214,
       "visitedCount": 77,
       "timeSlotCount": 3
     },
@@ -111,7 +111,7 @@
       "riskScore": 0.193,
       "energyCost": 12.334,
       "planningTimeMs": 5,
-      "wallTimeMs": 8.746,
+      "wallTimeMs": 9.694,
       "visitedCount": 77,
       "timeSlotCount": 16
     },
@@ -124,8 +124,8 @@
       "riskCellsPassed": 0,
       "riskScore": 0.364,
       "energyCost": 11.515,
-      "planningTimeMs": 4,
-      "wallTimeMs": 7.552,
+      "planningTimeMs": 8,
+      "wallTimeMs": 12.529,
       "visitedCount": 77,
       "timeSlotCount": 3
     },
@@ -138,8 +138,8 @@
       "riskCellsPassed": 0,
       "riskScore": 0.179,
       "energyCost": 16.576,
-      "planningTimeMs": 129,
-      "wallTimeMs": 133.09,
+      "planningTimeMs": 208,
+      "wallTimeMs": 213.732,
       "visitedCount": 2815,
       "timeSlotCount": 21
     },
@@ -152,8 +152,8 @@
       "riskCellsPassed": 0,
       "riskScore": 0.179,
       "energyCost": 16.576,
-      "planningTimeMs": 17,
-      "wallTimeMs": 19.38,
+      "planningTimeMs": 31,
+      "wallTimeMs": 39.479,
       "visitedCount": 346,
       "timeSlotCount": 21
     },
@@ -166,8 +166,8 @@
       "riskCellsPassed": 0,
       "riskScore": 0.295,
       "energyCost": 15.667,
-      "planningTimeMs": 18,
-      "wallTimeMs": 19.921,
+      "planningTimeMs": 31,
+      "wallTimeMs": 35.466,
       "visitedCount": 346,
       "timeSlotCount": 3
     },
@@ -180,8 +180,8 @@
       "riskCellsPassed": 0,
       "riskScore": 0.179,
       "energyCost": 16.576,
-      "planningTimeMs": 19,
-      "wallTimeMs": 22.274,
+      "planningTimeMs": 32,
+      "wallTimeMs": 38.394,
       "visitedCount": 346,
       "timeSlotCount": 21
     },
@@ -195,7 +195,7 @@
       "riskScore": 0.295,
       "energyCost": 15.667,
       "planningTimeMs": 27,
-      "wallTimeMs": 30.869,
+      "wallTimeMs": 32.995,
       "visitedCount": 346,
       "timeSlotCount": 3
     },
@@ -208,8 +208,8 @@
       "riskCellsPassed": 0,
       "riskScore": 0.163,
       "energyCost": 10.8,
-      "planningTimeMs": 27,
-      "wallTimeMs": 30.525,
+      "planningTimeMs": 40,
+      "wallTimeMs": 44.824,
       "visitedCount": 823,
       "timeSlotCount": 19
     },
@@ -223,7 +223,7 @@
       "riskScore": 0.163,
       "energyCost": 10.8,
       "planningTimeMs": 1,
-      "wallTimeMs": 4.899,
+      "wallTimeMs": 6.721,
       "visitedCount": 21,
       "timeSlotCount": 19
     },
@@ -236,8 +236,8 @@
       "riskCellsPassed": 0,
       "riskScore": 0.045,
       "energyCost": 10.8,
-      "planningTimeMs": 1,
-      "wallTimeMs": 3.429,
+      "planningTimeMs": 2,
+      "wallTimeMs": 9.141,
       "visitedCount": 21,
       "timeSlotCount": 2
     },
@@ -251,7 +251,7 @@
       "riskScore": 0.163,
       "energyCost": 10.8,
       "planningTimeMs": 1,
-      "wallTimeMs": 3.091,
+      "wallTimeMs": 6.416,
       "visitedCount": 21,
       "timeSlotCount": 19
     },
@@ -265,7 +265,7 @@
       "riskScore": 0.045,
       "energyCost": 10.8,
       "planningTimeMs": 1,
-      "wallTimeMs": 3.634,
+      "wallTimeMs": 6.366,
       "visitedCount": 21,
       "timeSlotCount": 2
     },
@@ -278,8 +278,8 @@
       "riskCellsPassed": 0,
       "riskScore": 0.257,
       "energyCost": 11.434,
-      "planningTimeMs": 112,
-      "wallTimeMs": 115.041,
+      "planningTimeMs": 109,
+      "wallTimeMs": 113.681,
       "visitedCount": 1818,
       "timeSlotCount": 15
     },
@@ -292,8 +292,8 @@
       "riskCellsPassed": 0,
       "riskScore": 0.257,
       "energyCost": 11.434,
-      "planningTimeMs": 4,
-      "wallTimeMs": 6.522,
+      "planningTimeMs": 5,
+      "wallTimeMs": 9.426,
       "visitedCount": 61,
       "timeSlotCount": 15
     },
@@ -306,8 +306,8 @@
       "riskCellsPassed": 0,
       "riskScore": 0.333,
       "energyCost": 11.113,
-      "planningTimeMs": 5,
-      "wallTimeMs": 8.032,
+      "planningTimeMs": 4,
+      "wallTimeMs": 7.797,
       "visitedCount": 61,
       "timeSlotCount": 3
     },
@@ -320,8 +320,8 @@
       "riskCellsPassed": 0,
       "riskScore": 0.257,
       "energyCost": 11.434,
-      "planningTimeMs": 5,
-      "wallTimeMs": 8.133,
+      "planningTimeMs": 6,
+      "wallTimeMs": 11.251,
       "visitedCount": 61,
       "timeSlotCount": 15
     },
@@ -334,8 +334,8 @@
       "riskCellsPassed": 0,
       "riskScore": 0.333,
       "energyCost": 11.113,
-      "planningTimeMs": 4,
-      "wallTimeMs": 6.782,
+      "planningTimeMs": 5,
+      "wallTimeMs": 10.214,
       "visitedCount": 61,
       "timeSlotCount": 3
     },
@@ -348,8 +348,8 @@
       "riskCellsPassed": 0,
       "riskScore": 0.2,
       "energyCost": 3.446,
-      "planningTimeMs": 5,
-      "wallTimeMs": 7.509,
+      "planningTimeMs": 7,
+      "wallTimeMs": 12.402,
       "visitedCount": 95,
       "timeSlotCount": 5
     },
@@ -363,7 +363,7 @@
       "riskScore": 0.205,
       "energyCost": 3.446,
       "planningTimeMs": 1,
-      "wallTimeMs": 4.707,
+      "wallTimeMs": 5.969,
       "visitedCount": 9,
       "timeSlotCount": 5
     },
@@ -377,7 +377,7 @@
       "riskScore": 0.141,
       "energyCost": 3.0,
       "planningTimeMs": 1,
-      "wallTimeMs": 3.624,
+      "wallTimeMs": 5.44,
       "visitedCount": 9,
       "timeSlotCount": 2
     },
@@ -391,7 +391,7 @@
       "riskScore": 0.2,
       "energyCost": 3.446,
       "planningTimeMs": 1,
-      "wallTimeMs": 3.766,
+      "wallTimeMs": 6.183,
       "visitedCount": 10,
       "timeSlotCount": 5
     },
@@ -405,7 +405,7 @@
       "riskScore": 0.141,
       "energyCost": 3.0,
       "planningTimeMs": 1,
-      "wallTimeMs": 3.934,
+      "wallTimeMs": 9.068,
       "visitedCount": 10,
       "timeSlotCount": 2
     }

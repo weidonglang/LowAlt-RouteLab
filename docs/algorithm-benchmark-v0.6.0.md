@@ -49,11 +49,11 @@ algorithm-service/benchmarks/results/benchmark-summary.csv
 
 | Algorithm | Success Rate | Avg Path Length | Avg Turn Count | Avg Risk Score | Avg Energy Cost | Avg Planning Time ms | Avg TimeSlot Count |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| A_STAR | 1.0 | 1759.655 | 1.2 | 0.1994 | 10.918 | 5.4 | 15.2 |
-| A_STAR_RISK_PENALTY | 1.0 | 1759.655 | 1.2 | 0.1984 | 10.918 | 6.2 | 15.2 |
-| DIJKSTRA | 1.0 | 1759.655 | 1.2 | 0.1984 | 10.918 | 76.6 | 15.2 |
-| THETA_STAR | 1.0 | 1706.536 | 0.6 | 0.2356 | 10.419 | 6.0 | 2.6 |
-| THETA_STAR_RISK_PENALTY | 1.0 | 1706.536 | 0.6 | 0.2356 | 10.419 | 7.4 | 2.6 |
+| A_STAR | 1.0 | 1759.655 | 1.2 | 0.1994 | 10.918 | 8.8 | 15.2 |
+| A_STAR_RISK_PENALTY | 1.0 | 1759.655 | 1.2 | 0.1984 | 10.918 | 9.0 | 15.2 |
+| DIJKSTRA | 1.0 | 1759.655 | 1.2 | 0.1984 | 10.918 | 105.8 | 15.2 |
+| THETA_STAR | 1.0 | 1706.536 | 0.6 | 0.2356 | 10.419 | 8.8 | 2.6 |
+| THETA_STAR_RISK_PENALTY | 1.0 | 1706.536 | 0.6 | 0.2356 | 10.419 | 8.4 | 2.6 |
 
 ## Notes
 
