@@ -1,6 +1,6 @@
 # LowAlt-RouteLab
 
-城市低空无人机航迹规划与风险评估仿真系统。
+城市低空无人机航迹规划、风险评估、能耗估计、TimeSlot 占用转换与 SkyGrid 联动仿真系统。
 
 英文名：
 
@@ -14,7 +14,20 @@ LowAlt-RouteLab 将城市低空空域建模为：
 Grid + Level + TimeSlot
 ```
 
-系统支持低空网格地图、禁飞区、障碍物、风险区、Dijkstra / A* / Theta* 路径规划、C8 转弯代价、D4 对称增强实验、风险评分、能耗估计、TimeSlot 占用转换和 SkyGrid mock 冲突校验。
+系统支持低空网格地图、禁飞区、障碍物、风险区、Dijkstra / A* / Theta* 路径规划、C8 转弯代价、D4 对称增强实验、风险评分、能耗估计、TimeSlot 占用转换，以及 SkyGrid `mock` / `real` 双模式联动。
+
+## Quick Links
+
+| 内容 | 入口 |
+| --- | --- |
+| 架构说明 | [docs/architecture.md](docs/architecture.md) |
+| SkyGrid 联动指南 | [docs/skygrid-integration-guide.md](docs/skygrid-integration-guide.md) |
+| v1.0.0 演示场景 | [docs/demo-scenario-v1.0.0.md](docs/demo-scenario-v1.0.0.md) |
+| 算法 benchmark | [docs/algorithm-benchmark-v1.0.0.md](docs/algorithm-benchmark-v1.0.0.md) |
+| 性能报告 | [docs/performance-report.md](docs/performance-report.md) |
+| Docker 部署 | [docs/docker-deployment.md](docs/docker-deployment.md) |
+| v1.0.0 检查清单 | [docs/release-checklist-v1.0.0.md](docs/release-checklist-v1.0.0.md) |
+| v1.0.0 验证记录 | [docs/release-validation-v1.0.0.md](docs/release-validation-v1.0.0.md) |
 
 ## 低空项目群闭环
 
@@ -59,7 +72,7 @@ demo map / benchmark tasks
 
 route-adapter-service
   ↓
-MockSkyGridClient
+MockSkyGridClient / RealSkyGridClient
 ```
 
 服务说明：
@@ -81,6 +94,9 @@ MockSkyGridClient
 - [v0.1.0 验证记录](docs/release-validation.md)
 - [群论增强模块](docs/group-theory-module.md)
 - [实验计划](docs/experiment-plan.md)
+- [SkyGrid 联动指南](docs/skygrid-integration-guide.md)
+- [v1.0.0 演示场景](docs/demo-scenario-v1.0.0.md)
+- [v1.0.0 发布检查清单](docs/release-checklist-v1.0.0.md)
 - [复试项目介绍](docs/interview-notes.md)
 
 ## 与 SkyGrid 的关系
@@ -100,7 +116,7 @@ LowAlt-RouteLab 负责：
 - TimeSlot 占用转换
 - 调用 SkyGrid 检查和提交
 
-当前项目用 `MockSkyGridClient` 模拟真实 SkyGrid，保证没有外部系统时也能完整演示。接入真实 SkyGrid 时，LowAlt-RouteLab 输出的占用序列会作为 SkyGrid 冲突检测和预约审批的输入。
+当前项目保留 `MockSkyGridClient`，保证没有外部系统时也能完整演示；同时提供 `RealSkyGridClient`，可在 SkyGrid Gateway 启动后执行真实冲突检查、预约提交和状态查询。
 
 ## 核心功能
 
@@ -324,14 +340,14 @@ npm run build
 - D4 对称变换和 benchmark 可运行。
 - 风险评分、风险解释和能耗估计已返回。
 - 路径可转换为 TimeSlot 占用序列。
-- `route-adapter-service` 可创建任务、调用 Python、检查 mock 冲突。
+- `route-adapter-service` 可创建任务、调用 Python、检查 mock 冲突，并支持 real SkyGrid Gateway 模式。
 - 前端可展示网格、航线、风险、算法对比和 SkyGrid 联动。
 - Docker Compose 文件已提供。
+- Benchmark 场景、结果 JSON/CSV 和图表资产已提供。
 
 后续可扩展：
 
 - Java 侧接 MySQL 持久化。
-- 实现 `RealSkyGridClient`。
 - 支持高度层切换和爬升代价。
 - 增加任务历史和地图编辑能力。
 
