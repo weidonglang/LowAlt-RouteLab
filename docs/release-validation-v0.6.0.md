@@ -46,5 +46,4 @@ npm.cmd run build
 
 ## Known Limitations
 
-- `simple_open_area` currently reports no path in the benchmark summary, so the aggregate success rate is 0.8 for each algorithm.
 - Benchmark scenarios are demo-scale and should be treated as regression evidence, not operational flight-performance evidence.

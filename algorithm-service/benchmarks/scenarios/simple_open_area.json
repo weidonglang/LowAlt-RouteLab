@@ -3,7 +3,7 @@
   "taskType": "LOGISTICS_DELIVERY",
   "mapId": "demo-city-20x20",
   "startGrid": "G-01-01",
-  "endGrid": "G-05-05",
+  "endGrid": "G-05-04",
   "level": "L120",
   "avoidRisk": false,
   "allowDiagonal": true

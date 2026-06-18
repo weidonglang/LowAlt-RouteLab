@@ -1,0 +1,33 @@
+name: lowalt-routelab-dev
+
+services:
+  algorithm-service:
+    build:
+      context: ./algorithm-service
+    container_name: lowalt-algorithm-service
+    ports:
+      - "8001:8001"
+
+  route-adapter-service:
+    build:
+      context: ./route-adapter-service
+    container_name: lowalt-route-adapter-service
+    environment:
+      ADAPTER_ALGORITHM_SERVICE_BASE_URL: http://algorithm-service:8001
+      SKYGRID_MODE: ${SKYGRID_MODE:-mock}
+      SKYGRID_BASE_URL: ${SKYGRID_BASE_URL:-http://host.docker.internal:8080}
+      SKYGRID_TOKEN: ${SKYGRID_TOKEN:-dev-token}
+    depends_on:
+      - algorithm-service
+    ports:
+      - "8081:8081"
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: lowalt-frontend
+    depends_on:
+      - algorithm-service
+      - route-adapter-service
+    ports:
+      - "5173:80"

@@ -1,0 +1,13 @@
+adapter:
+  algorithm-service-base-url: http://algorithm-service.example.internal:8001
+
+skygrid:
+  mode: real
+  base-url: https://skygrid.example.com
+  token: change-me
+  timeout-ms: 5000
+  org-id: 1
+  applicant-user-id: 1
+  applicant-name: lowalt-route-adapter
+  route-template-id: 1
+  default-level-id: 1

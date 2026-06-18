@@ -2,7 +2,7 @@
 
 ## Scope
 
-LowAlt v0.6.0 uses the algorithm benchmark as its primary performance evidence.
+LowAlt v1.0.0 uses the algorithm benchmark as its primary performance evidence.
 
 ## Run
 
@@ -29,15 +29,15 @@ algorithm-service/benchmarks/results/benchmark-summary.csv
 - Success Rate
 - TimeSlot Count
 
-## 2026-06-17 Summary
+## 2026-06-18 Summary
 
 | Algorithm | Success Rate | Avg Path Length | Avg Planning Time ms |
 |---|---:|---:|---:|
-| A_STAR | 0.8 | 2068.503 | 6.25 |
-| A_STAR_RISK_PENALTY | 0.8 | 2068.503 | 6.25 |
-| DIJKSTRA | 0.8 | 2068.503 | 84 |
-| THETA_STAR | 0.8 | 2008.17 | 6.25 |
-| THETA_STAR_RISK_PENALTY | 0.8 | 2008.17 | 6.5 |
+| A_STAR | 1.0 | 1759.655 | 5.4 |
+| A_STAR_RISK_PENALTY | 1.0 | 1759.655 | 6.2 |
+| DIJKSTRA | 1.0 | 1759.655 | 76.6 |
+| THETA_STAR | 1.0 | 1706.536 | 6.0 |
+| THETA_STAR_RISK_PENALTY | 1.0 | 1706.536 | 7.4 |
 
 ## Validation Note
 
