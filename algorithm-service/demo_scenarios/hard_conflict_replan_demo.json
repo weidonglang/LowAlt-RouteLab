@@ -1,7 +1,7 @@
 {
   "scenarioId": "hard_conflict_replan_demo",
   "taskName": "Hard Conflict Replan Demo",
-  "taskType": "CITY_INSPECTION",
+  "taskType": "POWER_LINE_INSPECTION",
   "mapId": "demo-city-20x20",
   "startGrid": "G-08-10",
   "endGrid": "G-08-14",
@@ -11,7 +11,7 @@
   "avoidRisk": true,
   "allowDiagonal": true,
   "connectSkyGrid": true,
-  "startTime": "2026-06-15T10:10:00",
+  "startTime": "2026-06-20T10:10:00",
   "speedMps": 10.0,
   "gridSizeMeters": 100.0,
   "slotMinutes": 5,

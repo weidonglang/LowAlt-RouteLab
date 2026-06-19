@@ -13,6 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -182,10 +183,13 @@ public class RealSkyGridClient implements SkyGridClient {
     }
 
     private Long timeSlotId(TimeSlotConvertResult.OccupancyUnit unit) {
-        return unit.sequenceNo() <= 0 ? 1L : (long) unit.sequenceNo();
+        return timeSlotIdByStart(unit.slotStart());
     }
 
     private Long timeSlotId(SkyGridOccupancySlot slot) {
+        if (slot.startTime() != null && !slot.startTime().isBlank()) {
+            return timeSlotIdByStart(slot.startTime());
+        }
         if (slot.timeSlotId() == null || slot.timeSlotId().isBlank()) {
             return 1L;
         }
@@ -194,6 +198,23 @@ public class RealSkyGridClient implements SkyGridClient {
         } catch (NumberFormatException ignored) {
             return 1L;
         }
+    }
+
+    private Long timeSlotIdByStart(String slotStart) {
+        if (slotStart == null || slotStart.isBlank()) {
+            return 1L;
+        }
+        LocalTime start = LocalDateTime.parse(slotStart).toLocalTime();
+        if (start.isBefore(LocalTime.of(10, 0))) {
+            return 1L;
+        }
+        if (start.isBefore(LocalTime.of(12, 0))) {
+            return 2L;
+        }
+        if (start.isBefore(LocalTime.of(16, 0))) {
+            return 3L;
+        }
+        return 4L;
     }
 
     private LocalDate bookingDate(String slotStart) {

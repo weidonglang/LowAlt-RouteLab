@@ -38,13 +38,13 @@ class SkyGridIntegrationMappingTest {
         assertThat(mapped.energyCost()).isEqualTo(7.5);
         assertThat(mapped.occupancySlots()).hasSize(1);
         assertThat(mapped.occupancySlots().get(0).gridId()).isEqualTo("G-02-03");
-        assertThat(mapped.occupancySlots().get(0).timeSlotId()).isEqualTo("1");
+        assertThat(mapped.occupancySlots().get(0).timeSlotId()).isEqualTo("2");
     }
 
     private static CreateRouteTaskRequest request() {
         return new CreateRouteTaskRequest(
                 "East district inspection",
-                "CITY_INSPECTION",
+                "POWER_LINE_INSPECTION",
                 "demo-city-20x20",
                 "G-02-03",
                 "G-16-14",
@@ -54,7 +54,7 @@ class SkyGridIntegrationMappingTest {
                 true,
                 true,
                 true,
-                LocalDateTime.of(2026, 6, 15, 10, 0),
+                LocalDateTime.of(2026, 6, 20, 10, 0),
                 10.0,
                 100.0,
                 5
@@ -85,8 +85,8 @@ class SkyGridIntegrationMappingTest {
         return new TimeSlotConvertResult.OccupancyUnit(
                 "G-02-03",
                 "L120",
-                "2026-06-15T10:00:00",
-                "2026-06-15T10:05:00",
+                "2026-06-20T10:00:00",
+                "2026-06-20T10:05:00",
                 1
         );
     }

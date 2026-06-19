@@ -34,7 +34,7 @@ class RealSkyGridClientTest {
                 .andExpect(jsonPath("$.taskName").value("LowAlt conflict preview"))
                 .andExpect(jsonPath("$.routeTemplateId").value(1))
                 .andExpect(jsonPath("$.levelId").value(2))
-                .andExpect(jsonPath("$.timeSlotIds[0]").value(1))
+                .andExpect(jsonPath("$.timeSlotIds[0]").value(2))
                 .andRespond(withSuccess("""
                         {
                           "success": true,
@@ -106,8 +106,8 @@ class RealSkyGridClientTest {
         return new TimeSlotConvertResult.OccupancyUnit(
                 "G-08-12",
                 "L120",
-                "2026-06-15T10:10:00",
-                "2026-06-15T10:15:00",
+                "2026-06-20T10:10:00",
+                "2026-06-20T10:15:00",
                 1
         );
     }

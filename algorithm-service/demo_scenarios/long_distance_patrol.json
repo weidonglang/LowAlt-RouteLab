@@ -11,7 +11,7 @@
   "avoidRisk": true,
   "allowDiagonal": true,
   "connectSkyGrid": false,
-  "startTime": "2026-06-15T11:00:00",
+  "startTime": "2026-06-20T11:00:00",
   "speedMps": 12.0,
   "gridSizeMeters": 100.0,
   "slotMinutes": 5
