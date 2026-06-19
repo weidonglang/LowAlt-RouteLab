@@ -1,0 +1,20 @@
+{
+  "scenarioId": "east_district_inspection",
+  "taskName": "East District UAV Inspection",
+  "taskType": "POWER_LINE_INSPECTION",
+  "mapId": "demo-city-20x20",
+  "startGrid": "G-02-03",
+  "endGrid": "G-16-14",
+  "startLevel": "L120",
+  "droneModel": "M30",
+  "algorithm": "A_STAR",
+  "avoidRisk": true,
+  "allowDiagonal": true,
+  "connectSkyGrid": true,
+  "startTime": "2026-06-20T10:00:00",
+  "speedMps": 10.0,
+  "gridSizeMeters": 100.0,
+  "slotMinutes": 5,
+  "riskArea": "around G-08-09",
+  "noFlyZone": "G-10-10 to G-12-12"
+}

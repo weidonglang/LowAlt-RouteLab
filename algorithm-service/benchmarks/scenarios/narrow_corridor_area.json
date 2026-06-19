@@ -1,0 +1,10 @@
+{
+  "scenarioId": "narrow_corridor_area",
+  "taskType": "POWER_LINE_INSPECTION",
+  "mapId": "demo-city-20x20",
+  "startGrid": "G-01-10",
+  "endGrid": "G-19-10",
+  "level": "L120",
+  "avoidRisk": true,
+  "allowDiagonal": false
+}

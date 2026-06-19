@@ -1,0 +1,18 @@
+{
+  "scenarioId": "risk_avoidance_demo",
+  "taskName": "Risk Avoidance Patrol",
+  "taskType": "POWER_LINE_INSPECTION",
+  "mapId": "demo-city-20x20",
+  "startGrid": "G-01-01",
+  "endGrid": "G-18-16",
+  "startLevel": "L120",
+  "droneModel": "M30",
+  "algorithm": "A_STAR",
+  "avoidRisk": true,
+  "allowDiagonal": true,
+  "connectSkyGrid": false,
+  "startTime": "2026-06-20T10:00:00",
+  "speedMps": 10.0,
+  "gridSizeMeters": 100.0,
+  "slotMinutes": 5
+}

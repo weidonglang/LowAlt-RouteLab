@@ -1,13 +1,10 @@
-server:
-  port: 8081
-
 adapter:
-  algorithm-service-base-url: http://127.0.0.1:8001
+  algorithm-service-base-url: http://algorithm-service.example.internal:8001
 
 skygrid:
-  mode: mock
-  base-url: http://127.0.0.1:8080
-  token: dev-token
+  mode: real
+  base-url: https://skygrid.example.com
+  token: change-me
   timeout-ms: 5000
   org-id: 1
   applicant-user-id: 1

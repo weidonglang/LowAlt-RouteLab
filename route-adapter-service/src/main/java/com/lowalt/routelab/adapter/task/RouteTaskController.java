@@ -2,6 +2,7 @@ package com.lowalt.routelab.adapter.task;
 
 import com.lowalt.routelab.adapter.common.ApiResponse;
 import com.lowalt.routelab.adapter.skygrid.ConflictCheckResult;
+import com.lowalt.routelab.adapter.skygrid.ConflictResolutionSuggestion;
 import com.lowalt.routelab.adapter.skygrid.SkyGridSubmitResult;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/tasks")
@@ -39,6 +42,11 @@ public class RouteTaskController {
     @PostMapping("/{taskId}/submit-skygrid")
     public ApiResponse<SkyGridSubmitResult> submitSkyGrid(@PathVariable long taskId) {
         return ApiResponse.success("skygrid submitted successfully", service.submitSkyGrid(taskId));
+    }
+
+    @PostMapping("/{taskId}/conflict-suggestions")
+    public ApiResponse<List<ConflictResolutionSuggestion>> conflictSuggestions(@PathVariable long taskId) {
+        return ApiResponse.success("conflict suggestions loaded successfully", service.conflictSuggestions(taskId));
     }
 
     @GetMapping("/{taskId}")

@@ -1,0 +1,10 @@
+{
+  "scenarioId": "risk_avoidance_area",
+  "taskType": "POWER_LINE_INSPECTION",
+  "mapId": "demo-city-20x20",
+  "startGrid": "G-02-03",
+  "endGrid": "G-16-14",
+  "level": "L120",
+  "avoidRisk": true,
+  "allowDiagonal": true
+}

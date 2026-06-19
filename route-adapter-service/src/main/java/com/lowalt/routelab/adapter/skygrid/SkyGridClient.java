@@ -9,5 +9,15 @@ public interface SkyGridClient {
     ConflictCheckResult checkConflict(List<TimeSlotConvertResult.OccupancyUnit> occupancyUnits);
 
     SkyGridSubmitResult submitBooking(long taskId, long planId, List<TimeSlotConvertResult.OccupancyUnit> occupancyUnits);
+
+    ConflictCheckResult checkConflict(SkyGridBookingRequest request);
+
+    SkyGridSubmitResult submitBooking(SkyGridBookingRequest request);
+
+    SkyGridBookingStatus getBookingStatus(String bookingId);
+
+    SkyGridOccupancyPreviewResult submitOccupancyPreview(List<TimeSlotConvertResult.OccupancyUnit> occupancyUnits);
+
+    List<ConflictResolutionSuggestion> getConflictResolutionSuggestions(String bookingId);
 }
 

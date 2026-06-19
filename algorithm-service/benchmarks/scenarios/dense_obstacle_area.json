@@ -1,0 +1,10 @@
+{
+  "scenarioId": "dense_obstacle_area",
+  "taskType": "EMERGENCY_RESCUE",
+  "mapId": "demo-city-20x20",
+  "startGrid": "G-03-04",
+  "endGrid": "G-17-16",
+  "level": "L150",
+  "avoidRisk": true,
+  "allowDiagonal": true
+}

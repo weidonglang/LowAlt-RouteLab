@@ -1,11 +1,9 @@
 package com.lowalt.routelab.adapter.skygrid;
 
 import com.lowalt.routelab.adapter.algorithm.TimeSlotConvertResult;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
 public class MockSkyGridClient implements SkyGridClient {
 
     @Override
@@ -35,6 +33,39 @@ public class MockSkyGridClient implements SkyGridClient {
                 "MOCK-SG-" + taskId + "-" + planId,
                 "Mock SkyGrid booking submitted"
         );
+    }
+
+    @Override
+    public ConflictCheckResult checkConflict(SkyGridBookingRequest request) {
+        return checkConflict(List.of());
+    }
+
+    @Override
+    public SkyGridSubmitResult submitBooking(SkyGridBookingRequest request) {
+        return submitBooking(request.taskId(), request.planId(), List.of());
+    }
+
+    @Override
+    public SkyGridBookingStatus getBookingStatus(String bookingId) {
+        return new SkyGridBookingStatus(bookingId, "MOCK_SUBMITTED", "Mock SkyGrid booking status");
+    }
+
+    @Override
+    public SkyGridOccupancyPreviewResult submitOccupancyPreview(List<TimeSlotConvertResult.OccupancyUnit> occupancyUnits) {
+        return new SkyGridOccupancyPreviewResult("MOCK_PREVIEW", occupancyUnits.size(), "Mock occupancy preview accepted");
+    }
+
+    @Override
+    public List<ConflictResolutionSuggestion> getConflictResolutionSuggestions(String bookingId) {
+        return List.of(new ConflictResolutionSuggestion(
+                "MOCK-CONFLICT-1",
+                "RISK_CONFLICT",
+                "G-05-07",
+                "L120",
+                "1",
+                "MANUAL_REVIEW_OR_ADJACENT_GRID",
+                "Mock suggestion: route through adjacent grid or submit to manual review"
+        ));
     }
 }
 

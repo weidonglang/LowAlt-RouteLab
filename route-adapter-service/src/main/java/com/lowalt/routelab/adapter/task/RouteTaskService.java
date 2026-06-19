@@ -5,7 +5,10 @@ import com.lowalt.routelab.adapter.algorithm.AlgorithmPlanRequest;
 import com.lowalt.routelab.adapter.algorithm.AlgorithmPlanResult;
 import com.lowalt.routelab.adapter.algorithm.TimeSlotConvertRequest;
 import com.lowalt.routelab.adapter.algorithm.TimeSlotConvertResult;
+import com.lowalt.routelab.adapter.skygrid.ConflictResolutionSuggestion;
 import com.lowalt.routelab.adapter.skygrid.ConflictCheckResult;
+import com.lowalt.routelab.adapter.skygrid.RoutePlanToSkyGridBookingMapper;
+import com.lowalt.routelab.adapter.skygrid.SkyGridBookingRequest;
 import com.lowalt.routelab.adapter.skygrid.SkyGridClient;
 import com.lowalt.routelab.adapter.skygrid.SkyGridSubmitResult;
 import org.springframework.http.HttpStatus;
@@ -24,16 +27,19 @@ public class RouteTaskService {
     private final InMemoryRouteTaskRepository repository;
     private final AlgorithmClient algorithmClient;
     private final SkyGridClient skyGridClient;
+    private final RoutePlanToSkyGridBookingMapper skyGridBookingMapper;
     private final AtomicLong planIdSequence = new AtomicLong(1);
 
     public RouteTaskService(
             InMemoryRouteTaskRepository repository,
             AlgorithmClient algorithmClient,
-            SkyGridClient skyGridClient
+            SkyGridClient skyGridClient,
+            RoutePlanToSkyGridBookingMapper skyGridBookingMapper
     ) {
         this.repository = repository;
         this.algorithmClient = algorithmClient;
         this.skyGridClient = skyGridClient;
+        this.skyGridBookingMapper = skyGridBookingMapper;
     }
 
     public RouteTaskResponse createTask(CreateRouteTaskRequest request) {
@@ -78,7 +84,8 @@ public class RouteTaskService {
     public ConflictCheckResult checkConflict(long taskId) {
         RouteTask task = requireTask(taskId);
         requireSuccessfulPlan(task);
-        ConflictCheckResult result = skyGridClient.checkConflict(task.occupancyUnits());
+        SkyGridBookingRequest request = skyGridBookingMapper.toBookingRequest(task);
+        ConflictCheckResult result = skyGridClient.checkConflict(request);
         task.markConflictChecked(result);
         return result;
     }
@@ -86,13 +93,21 @@ public class RouteTaskService {
     public SkyGridSubmitResult submitSkyGrid(long taskId) {
         RouteTask task = requireTask(taskId);
         requireSuccessfulPlan(task);
-        SkyGridSubmitResult result = skyGridClient.submitBooking(
-                task.id(),
-                task.plan().id(),
-                task.occupancyUnits()
-        );
+        SkyGridBookingRequest request = skyGridBookingMapper.toBookingRequest(task);
+        SkyGridSubmitResult result = skyGridClient.submitBooking(request);
         task.markSubmitted(result);
         return result;
+    }
+
+    public List<ConflictResolutionSuggestion> conflictSuggestions(long taskId) {
+        RouteTask task = requireTask(taskId);
+        if (task.skyGridSubmit() == null || task.skyGridSubmit().bookingId() == null || task.skyGridSubmit().bookingId().isBlank()) {
+            throw new ResponseStatusException(
+                    HttpStatus.CONFLICT,
+                    "task must be submitted to SkyGrid before querying conflict suggestions"
+            );
+        }
+        return skyGridClient.getConflictResolutionSuggestions(task.skyGridSubmit().bookingId());
     }
 
     private RouteTask requireTask(long taskId) {

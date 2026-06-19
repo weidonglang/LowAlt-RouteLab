@@ -1,0 +1,18 @@
+{
+  "scenarioId": "long_distance_patrol",
+  "taskName": "Long Distance Patrol",
+  "taskType": "POWER_LINE_INSPECTION",
+  "mapId": "demo-city-20x20",
+  "startGrid": "G-01-01",
+  "endGrid": "G-19-19",
+  "startLevel": "L150",
+  "droneModel": "M30",
+  "algorithm": "THETA_STAR",
+  "avoidRisk": true,
+  "allowDiagonal": true,
+  "connectSkyGrid": false,
+  "startTime": "2026-06-20T11:00:00",
+  "speedMps": 12.0,
+  "gridSizeMeters": 100.0,
+  "slotMinutes": 5
+}
